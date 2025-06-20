@@ -1,0 +1,484 @@
+  <!-- Desktop Navigation -->
+   <div class="m-0 p-0">
+  <nav class="hidden md:flex justify-around items-center w-screen h-20 bg-gray-900 text-white mx-auto">
+    <div class=" logo text-3xl hover:cursor-default">DAVID ADOM</div>
+    <ul class="flex items-center space-x-8">
+      <li><a (click)="scrollToAbout()" class="cursor-pointer hover:text-blue-500 hover:underline transition-all duration-700">About</a></li>
+      <li><a (click)="scrollToexperience()" class="cursor-pointer hover:text-blue-500 hover:underline transition-all duration-700">Experience</a></li>
+      <li><a (click)="scrollToProjects()" class="cursor-pointer hover:text-blue-500 hover:underline transition-all duration-700">Projects</a></li>
+      <li><a (click)="scrollToContact()" class="cursor-pointer hover:text-blue-500 hover:underline transition-all duration-700">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <nav class="flex md:hidden w-screen bg-gray-900 h-12 text-white ">
+    <div class="flex justify-between items-center w-[87vh]">
+      <div class="logo text-3xl">DAVID ADOM</div>
+      <div class="hum-menu relative ">
+        <div class="hum-icon cursor-pointer flex flex-col justify-between h-5 w-5 p-4 " (click) ="toggleIcon()">
+          <span class="block w-8 h-0.5 bg-white mb-1"></span>
+          <span class="block w-8 h-0.5 bg-white mb-1"></span>
+          <span class="block w-8 h-0.5 bg-white"></span>
+        </div>
+        <div class="menu-links absolute right-0 top-full mt-2 w-48 bg-gray-800 rounded-lg shadow-xl py-2" [class.hidden]="!isMenuOpen">
+          <li class="px-4 py-2"><a (click)="scrollToAbout()" class="block hover:text-blue-500 transition-all duration-700">About</a></li>
+          <li class="px-4 py-2"><a [routerLink]="['experience']" class="block hover:text-blue-500 transition-all duration-700">Experience</a></li>
+          <li class="px-4 py-2"><a [routerLink]="['projects']" class="block hover:text-blue-500 transition-all duration-700">Projects</a></li>
+          <li class="px-4 py-2"><a [routerLink]="['contacts']" class="block hover:text-blue-500 transition-all duration-700">Contacts</a></li>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section #profile id="profile" class="flex p-4 h-screen box-border justify-center bg-gray-200 ">
+    <div class="pic-container flex  relative top-24 w-96 h-96 ">
+      <img src="assets/images/profileme1.png" alt="Profile Picture " class=" object-cover rounded-full shadow-2xl  w-80 h-96  ">
+    </div>
+    <div class="section-text self-center text-center space-y-4">
+      <p class="section-p font-semibold text-center text-2xl">Hello I"m</p>
+      <h1 class="text-4xl text-center font-bold mb-4">David Adom</h1>
+      <p class="">Full Stack Developer </p>
+
+      <div class="btn-container flex flex-row gap-4 flex-wrap justify-center">
+            <button class="Documents-btn" onclick="window.open('assets/images/resume.pdf', '_blank')">
+              <span class="folderContainer">
+                <svg
+                  class="fileBack"
+                  width="146"
+                  height="113"
+                  viewBox="0 0 146 113"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z"
+                    fill="url(#paint0_linear_117_4)"
+                  ></path>
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_117_4"
+                      x1="0"
+                      y1="0"
+                      x2="72.93"
+                      y2="95.4804"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#8F88C2"></stop>
+                      <stop offset="1" stop-color="#5C52A2"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <svg
+                  class="filePage"
+                  width="88"
+                  height="99"
+                  viewBox="0 0 88 99"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="88" height="99" fill="url(#paint0_linear_117_6)"></rect>
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_117_6"
+                      x1="0"
+                      y1="0"
+                      x2="81"
+                      y2="160.5"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="white"></stop>
+                      <stop offset="1" stop-color="#686868"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                <svg
+                  class="fileFront"
+                  width="160"
+                  height="79"
+                  viewBox="0 0 160 79"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
+                    fill="url(#paint0_linear_117_5)"
+                  ></path>
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_117_5"
+                      x1="38.7619"
+                      y1="8.71323"
+                      x2="66.9106"
+                      y2="82.8317"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#C3BBFF"></stop>
+                      <stop offset="1" stop-color="#51469A"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <p class="text">My Resume</p>
+            </button>
+            <button class="" onclick="location.href='./#contacts'" class="linkedin-btn">
+              Contacts
+                  <div class="star-1">
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      version="1.1"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 784.11 815.53"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs></defs>
+                      <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                          class="fil0"
+                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="star-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      version="1.1"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 784.11 815.53"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs></defs>
+                      <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                          class="fil0"
+                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="star-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      version="1.1"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 784.11 815.53"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs></defs>
+                      <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                          class="fil0"
+                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="star-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      version="1.1"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 784.11 815.53"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs></defs>
+                      <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                          class="fil0"
+                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="star-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      version="1.1"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 784.11 815.53"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs></defs>
+                      <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                          class="fil0"
+                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="star-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      version="1.1"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 784.11 815.53"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs></defs>
+                      <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                          class="fil0"
+                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+            </button>
+      </div> 
+
+      <div class="socals flex justify-center flex-row gap-4">
+        <img src="assets/images/linkedin.png" alt="my Linkedin profile" class="icon w-12 h-12 cursor-pointer hover:mx-7 transition-all duration-700 " onclick="location.href='https://www.linkedin.com/in/david-yeboah-b8596a338/'"/>      
+      <img src="assets/images/github.png" alt="my github profile" class="icon w-12 h-12 cursor-pointer hover:mx-7 transition-all duration-700" onclick="location.href='https://github.com/David24242442/'"/>
+    </div> 
+
+    </div>
+  </section>
+
+ <section #about id="about" class="section-text flex flex-col h-screen justify-start items-center bg-gray-200 p-4">
+  <p class="mt-4">Get to know More !!</p>
+  <h1 class="text-4xl font-bold mt-2">About Me</h1>
+
+  <!-- Container for Profile and Info -->
+  <div class="s-container mt-10 flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-6xl">
+    
+    <!-- Profile Image -->
+    <div class="rounded-lg w-96 h-96 overflow-hidden">
+      <img 
+        src="assets/images/profileme2.png" 
+        alt="profile" 
+        class="w-full h-full object-cover rounded-3xl" />
+    </div>
+    
+    <!-- About Details -->
+    <div class="about flex flex-col gap-4 w-full">
+      <!-- Row for Experience and Education Cards -->
+      <div class="flex flex-col md:flex-row gap-4 w-full">
+        <!-- Experience Card -->
+        <div class="details border-2 border-gray-600 rounded-3xl p-4 flex flex-col items-center text-center w-1/2 md:w-1/3">
+          <img src="assets/images/experience.png" alt="experience icon" class="w-auto h-8 mb-2" />
+          <h2 class="font-semibold">Experience</h2>
+          <p>2+ years <br> Full Stack Developer</p>
+        </div>
+
+        <!-- Education Card -->
+        <div class="details border-2 border-gray-600 rounded-3xl p-4 flex flex-col items-center text-center w-1/2  md:w-1/3">
+          <img src="assets/images/education.png" alt="education icon" class="w-auto h-8 mb-2" />
+          <h2 class="font-bold text-lg">Education</h2>
+          <p>Degree <br> B.Sc. Information Technology</p>
+        </div>
+      </div>
+      <!-- About Text Row -->
+      <div class="text border-2 border-gray-600 rounded-3xl p-4 flex items-center text-center flex-wrap w-2/3 h-32">
+        <p>
+         Hi, I’m David Adom Yeboah, a passionate and results-driven full-stack software developer with a strong foundation in building modern, scalable, and user-friendly applications. I specialize in technologies like Angular, Flutter, Python, JavaScript, and FastAPI, and I enjoy turning complex problems into elegant, efficient solutions.
+
+
+
+
+If you're looking for someone who brings both technical expertise and a creative mindset to software development, let's connect!
+
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arrow to Experience Section -->
+  <div class="arrow-img mt-10">
+    <img 
+      src="assets/images/arrow.png" 
+      alt="arrow icon" 
+      (click)="scrollToexperience()" 
+      class="w-8 h-6 cursor-pointer" />
+  </div>
+</section>
+
+
+  <section id="experience" class="h-auto min-h-screen flex flex-col bg-gray-200 p-4 sm:p-8">
+  <!-- Header -->
+  <div class="header-tag flex flex-col items-center justify-start gap-2">
+    <p class="text-sm sm:text-base">Explore MY</p>
+    <h1 class="text-xl sm:text-3xl font-bold">My Experience</h1>
+  </div>
+
+  <!-- Experience Container -->
+  <div class="experience-container flex-1 flex items-center justify-center flex-col">
+    <div class="details w-full">
+      <h2 class="flex justify-center font-semibold text-lg sm:text-2xl relative top-[-10vh]">Full Stack Developer</h2>
+
+      <div class="experience-details flex flex-wrap justify-center items-center gap-4 sm:gap-10 rounded-3xl p-4">
+        <!-- Left Article Container -->
+        <div class="article-container border-2 border-gray-600 w-full sm:w-[50vh] md:w-[70vh] h-auto sm:h-72 rounded-3xl flex flex-col justify-center items-center p-2">
+          <h2 class="font-semibold text-base sm:text-xl text-center">FrontEnd Technology</h2>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <article class="flex flex-col items-center">
+              <img src="assets/images/checkmark.png" alt="checkmark icon" class="w-6 h-6">
+              <h2 class="text-sm sm:text-base">HTML</h2>
+              <p class="text-xs sm:text-sm">Experience</p>
+            </article>
+            <article class="flex flex-col items-center">
+              <img src="assets/images/checkmark.png" alt="checkmark icon" class="w-6 h-6">
+              <h2 class="text-sm sm:text-base">CSS</h2>
+              <p class="text-xs sm:text-sm">Experience</p>
+            </article>
+            <article class="flex flex-col items-center">
+              <img src="assets/images/checkmark.png" alt="checkmark icon" class="w-6 h-6">
+              <h2 class="text-sm sm:text-base">JavaScript</h2>
+              <p class="text-xs sm:text-sm">Experience</p>
+            </article>
+            <article class="flex flex-col items-center">
+              <img src="assets/images/checkmark.png" alt="checkmark icon" class="w-6 h-6">
+              <h2 class="text-sm sm:text-base">React</h2>
+              <p class="text-xs sm:text-sm">Experience</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Right Article Container -->
+        <div class="article-container border-2 border-gray-600 w-full sm:w-[50vh] md:w-[70vh] h-auto sm:h-72 rounded-3xl flex flex-col justify-center items-center p-2">
+          <h2 class="font-semibold text-base sm:text-xl text-center">BackEnd Technology</h2>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <article class="flex flex-col items-center">
+              <img src="assets/images/checkmark.png" alt="checkmark icon" class="w-6 h-6">
+              <h2 class="text-sm sm:text-base">Node.js</h2>
+              <p class="text-xs sm:text-sm">Experience</p>
+            </article>
+            <article class="flex flex-col items-center">
+              <img src="assets/images/checkmark.png" alt="checkmark icon" class="w-6 h-6">
+              <h2 class="text-sm sm:text-base">MongoDB</h2>
+              <p class="text-xs sm:text-sm">Experience</p>
+            </article>
+            <article class="flex flex-col items-center">
+              <img src="assets/images/checkmark.png" alt="checkmark icon" class="w-6 h-6">
+              <h2 class="text-sm sm:text-base">Express.js</h2>
+              <p class="text-xs sm:text-sm">Experience</p>
+            </article>
+            <article class="flex flex-col items-center">
+              <img src="assets/images/checkmark.png" alt="checkmark icon" class="w-6 h-6">
+              <h2 class="text-sm sm:text-base">Tailwind CSS</h2>
+              <p class="text-xs sm:text-sm">Experience</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arrow -->
+  <div class="arrow-img mt-10">
+    <img src="assets/images/arrow.png" alt="arrow icon" class="w-8 h-6 cursor-pointer absolute top-[290vh] right-10" onclick="scrollToProjects()" />
+  </div>
+</section>
+
+<<section  #projects id="projects" class="h-screen flex flex-col bg-gray-200 p-2 md:flex md:items-center md:justify-center md:p-4">
+  <div class="header-con">
+    <div class="header-tag gap-6 flex flex-col items-center justify-start relative top-[10vh]">
+      <p class="text-start">Explore my</p>
+      <h1 class="text-3xl font-bold text-start">MY Projects</h1>
+
+      <div class="details-container justify-center items-center flex flex-wrap p-2 gap-4">
+        <!-- Project 1 -->
+        <div class="details flex flex-col justify-center items-center gap-2">
+          <div class="article-con">
+            <img src="assets/images/project-1.png" alt="Project 1 screenshot" class="icon w-96 h-96">
+          </div>
+          <h2>Project One</h2>
+          <div class="btn flex justify-start items-center gap-2">
+            <button onclick="location.href='https://github.com/Nitish-kumar-singh/E-commerce-website'">
+              Github ↗
+            </button>
+            <button onclick="location.href='https://github.com/Nitish-kumar-singh/E-commerce-website'">
+              Live demo ↗
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="details flex flex-col justify-center items-center gap-2">
+          <div class="article-con">
+            <img src="assets/images/project-1.png" alt="Project 2 screenshot" class="icon w-96 h-96">
+          </div>
+          <h2>Project Two</h2>
+          <div class="btn flex justify-start items-center gap-2">
+            <button onclick="location.href='https://github.com/Nitish-kumar-singh/E-commerce-website'">
+              Github ↗
+            </button>
+            <button onclick="location.href='https://github.com/Nitish-kumar-singh/E-commerce-website'">
+              Live demo ↗
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="details flex flex-col justify-center items-center gap-2">
+          <div class="article-con">
+            <img src="assets/images/project-3.png" alt="Project 3 screenshot" class="icon w-96 h-96">
+          </div>
+          <h2>Project Three</h2>
+          <div class="btn flex justify-start items-center gap-2">
+            <button onclick="location.href='https://github.com/Nitish-kumar-singh/E-commerce-website'">
+              Github ↗
+            </button>
+            <button onclick="location.href='https://github.com/Nitish-kumar-singh/E-commerce-website'">
+              Live demo ↗
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section #contact  id="contact" class="h-screen bg-gray-200 flex flex-col  justify-center items-center"> 
+  <div class="header-con flex flex-col justify-start items-center relative top-[-15vh]">
+    <p class="text-start">Get in touch</p>
+    <h1 class="text-3xl font-bold text-start">Contact Me</h1>
+  </div>
+
+  <div class="contact-info-up flex justify-center items-center rounded-3xl m-2 p-4 border-2 border-gray-800 w-[72vh] h-32">
+    <div class="contact-info-con flex justify-center items-center gap-4 p-4 hover:bg-gray-400 rounded-full transition-all duration-500 h-12 w-64">
+      <img src="assets/images/email.png" alt="email icon" class="icon w-10 h-10 hover:scale-110 transition-transform">
+      <p class="text-lg hover:text-blue-600"><a href="mailto:davidadom2424@gmail.com">My Email</a></p>
+    </div>
+    <div class="contact-info-con flex justify-center items-center gap-4 p-4 hover:bg-gray-400 rounded-full transition-all duration-500  h-12 w-64">
+      <img src="assets/images/linkedin.png" alt="linkedin icon" class="icon w-10 h-10 hover:scale-110 transition-transform">
+      <p class="text-lg hover:text-blue-600"><a href="https://www.linkedin.com/in/david-yeboah-b8596a338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">My LinkedIn</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-200 py-4 overflo-x-hidden">
+ <nav>
+    <div class="nav-links flex justify-center items-center relative top-[-10vh]">
+      <ul class="flex items-center space-x-8">
+        <li><a (click)="scrollToAbout()" class="cursor-pointer hover:text-blue-500 hover:underline transition-all duration-700">About</a></li>
+        <li><a (click)="scrollToexperience()" class="cursor-pointer hover:text-blue-500 hover:underline transition-all duration-700">Experience</a></li>
+        <li><a (click)="scrollToProjects()" class="cursor-pointer hover:text-blue-500 hover:underline transition-all duration-700">Projects</a></li>
+        <li><a (click)="scrollToContact()" class="cursor-pointer hover:text-blue-500 hover:underline transition-all duration-700">Contacts</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="footer-con flex justify-center items-center relative bottom-[8vh]">
+    <p class="text-lg hover:text-blue-600 text-center">Copyright &copy; 2023. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</div>
