@@ -50,13 +50,13 @@ export class LandingpageComponent implements OnInit, OnDestroy {
   // ENSURED: Explicitly typed as Project[] (array, not HTMLElement)
  projects: Project[] = [
   {
-    title: 'E-Commerce Analytics Dashboard',
+    title: 'Heart Factors Analytics Dashboard',
     description: 'Real-time sales analytics dashboard with predictive modeling for inventory management and customer behavior analysis.',
-    image: 'assets/images/project-1.png',
+    image: 'assets/images/data.jpg',
     category: 'Data Visualization',
     technologies: ['Power BI', 'Python', 'SQL', 'Azure'],
     githubUrl: 'https://github.com/David24242442/',
-    liveUrl: '#'
+    liveUrl: 'https://app.powerbi.com/groups/me/reports/07561cfa-5111-4977-9c16-d37233b1502c/0910953500869150b900?experience=power-bi'
   },
   {
     title: 'Customer Churn Prediction',
@@ -65,16 +65,16 @@ export class LandingpageComponent implements OnInit, OnDestroy {
     category: 'Machine Learning',
     technologies: ['Python', 'Scikit-learn', 'Tableau', 'PostgreSQL'],
     githubUrl: 'https://github.com/David24242442/',
-    liveUrl: '#'
+    liveUrl: 'https://david24242442.github.io/forextracker'
   },
   {
     title: 'Financial Data Pipeline',
     description: 'Automated ETL pipeline for processing financial transactions with real-time anomaly detection and reporting.',
-    image: 'assets/images/project-3.png',
+    image: 'assets/images/forex.jpg',
     category: 'Data Engineering',
     technologies: ['Python', 'Apache Airflow', 'MongoDB', 'Docker'],
     githubUrl: 'https://github.com/David24242442/',
-    liveUrl: '#'
+    liveUrl: 'https://david24242442.github.io/forextracker'
   }
 ];
 
@@ -114,9 +114,21 @@ export class LandingpageComponent implements OnInit, OnDestroy {
       'Worked closely with developers to bring creative concepts to life through code.',
       'Managed multiple client projects ensuring creative consistency and timely delivery.',
     ],
+   },
+   {
+    title: 'Digital Designer',
+    company: 'Kr8tive Impakt',
+    duration: 'Jan 2021 – May 2022',
+    expanded: false,
+    responsibilities: [
+      'Created visual brand identities and digital designs for clients and campaigns.',
+      'Designed UI/UX layouts for web and mobile applications.',
+      'Worked closely with developers to bring creative concepts to life through code.',
+      'Managed multiple client projects ensuring creative consistency and timely delivery.',
+    ],
   },
 ];
- expandedExperiences = [false, false, false];
+ expandedExperiences = [false, false, false, false];
 
 toggleExperience(index: number): void {
   this.expandedExperiences[index] = !this.expandedExperiences[index];
@@ -290,8 +302,8 @@ toggleExperience(index: number): void {
   }
   downloadResume(): void {
     const link = document.createElement('a');
-    link.href = 'assets/David_Oliver_Resume.pdf';
-    link.download = 'David_Oliver_Resume.pdf';
+     window.open('assets/images/Dave.pdf', '_blank');
+  
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
