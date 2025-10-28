@@ -49,32 +49,61 @@ export class LandingpageComponent implements OnInit, OnDestroy {
 
   // ENSURED: Explicitly typed as Project[] (array, not HTMLElement)
  projects: Project[] = [
+ 
   {
+    title: 'TechSolutions Dashboard',
+    description: 'This project analyzes TechSolutions Ghana’s business performance to identify ways to improve client retention, service efficiency, and overall profitability..',
+    image: 'assets/images/pro.png',
+    category: 'Visualization & ML',
+    technologies: ['Python', 'Scikit-learn', 'Tableau', 'PostgreSQL'],
+    githubUrl: 'https://github.com/David24242442/',
+    liveUrl: 'https://app.powerbi.com/groups/me/reports/77e8cc06-a207-4eab-8b48-ff9e51da4750/7fb7d48861d7ba5b4c7a?experience=power-bi'
+  },
+  {
+    title: 'StreamFlix',
+    description: 'Automated ETL pipeline for processing financial transactions with real-time anomaly detection and reporting.',
+    image: 'assets/images/pro1.png',
+    category: 'Data Engineering',
+    technologies: ['Python', 'Apache Airflow', 'MongoDB', 'Docker'],
+    githubUrl: 'https://github.com/David24242442/',
+    liveUrl: 'https://app.powerbi.com/groups/me/reports/622df7cf-2602-4fc1-a2a3-c006ce461943/bfd121c92c546d3902f3?experience=power-bi'
+   },
+    {
     title: 'Heart Factors Analytics Dashboard',
     description: 'Real-time sales analytics dashboard with predictive modeling for inventory management and customer behavior analysis.',
-    image: 'assets/images/data.jpg',
+    image: 'assets/images/pro3.png',
     category: 'Data Visualization',
     technologies: ['Power BI', 'Python', 'SQL', 'Azure'],
     githubUrl: 'https://github.com/David24242442/',
     liveUrl: 'https://app.powerbi.com/groups/me/reports/07561cfa-5111-4977-9c16-d37233b1502c/0910953500869150b900?experience=power-bi'
   },
-  {
-    title: 'Customer Churn Prediction',
-    description: 'Machine learning model to predict customer churn with 92% accuracy, including interactive visualization dashboard.',
-    image: 'assets/images/project-2.png',
-    category: 'Machine Learning',
-    technologies: ['Python', 'Scikit-learn', 'Tableau', 'PostgreSQL'],
+   {
+    title: 'Financial Data Pipeline',
+    description: 'Visual analytics dashboard for Tourism Agency, enabling the business manager to identify trends and improve tourism outcomes.',
+    image: 'assets/images/pro4.png',
+    category: 'Data Visualization',
+    technologies: ['Python', 'Sql', 'Excel', 'Power BI'],
     githubUrl: 'https://github.com/David24242442/',
-    liveUrl: 'https://david24242442.github.io/forextracker'
-  },
-  {
+    liveUrl: 'https://app.powerbi.com/groups/me/reports/b25f0ed1-1da9-4a2d-a4f2-9e3f18c71468/c497e427d43e24daa200?experience=power-bi'
+   },
+   
+     {
     title: 'Financial Data Pipeline',
     description: 'Automated ETL pipeline for processing financial transactions with real-time anomaly detection and reporting.',
     image: 'assets/images/forex.jpg',
     category: 'Data Engineering',
-    technologies: ['Python', 'Apache Airflow', 'MongoDB', 'Docker'],
+    technologies: ['Python', 'git', 'angular', 'Docker'],
     githubUrl: 'https://github.com/David24242442/',
     liveUrl: 'https://david24242442.github.io/forextracker'
+   },
+       {
+    title: 'Service Wepp',
+    description: 'Creating a Website for a Service-based Company to enhance their online presence and attract more customers.',
+    image: 'assets/images/pro7.png',
+    category: 'WEB DEVELOPMENT',
+    technologies: ['Python', 'Angular', 'FireStore', 'Docker'],
+    githubUrl: 'https://github.com/David24242442/',
+    liveUrl: ' https://servicewepp.web.app/'
   }
 ];
 
