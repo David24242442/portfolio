@@ -51,17 +51,26 @@ export class LandingpageComponent implements OnInit, OnDestroy {
  projects: Project[] = [
  
   {
+    title: ' MediHealth Sales Performance',
+    description: 'The MediHealth Sales Performance project analyzes sales data using Power BI to uncover trends, evaluate                regional and customer performance, and provide insights to improve profitability and customer retention.',
+    image: 'assets/images/medi.png',
+    category: 'Data Visualization',
+    technologies: ['Python', 'Sql', 'Excel', 'Power BI'],
+    githubUrl: 'https://github.com/David24242442/',
+    liveUrl: 'https://app.powerbi.com/groups/me/reports/16c185e3-cadc-46b1-a29c-2bb744708307/81036f8889a06eb52c1a?experience=power-bi'
+   },
+  {
     title: 'TechSolutions Dashboard',
     description: 'This project analyzes TechSolutions Ghana’s business performance to identify ways to improve client retention, service efficiency, and overall profitability..',
     image: 'assets/images/pro.png',
-    category: 'Visualization & ML',
-    technologies: ['Python', 'Scikit-learn', 'Tableau', 'PostgreSQL'],
+    category: 'Visualization Dashboard',
+    technologies: ['Python', 'Scikit-learn', 'Power Bi', 'SQL'],
     githubUrl: 'https://github.com/David24242442/',
     liveUrl: 'https://app.powerbi.com/groups/me/reports/77e8cc06-a207-4eab-8b48-ff9e51da4750/7fb7d48861d7ba5b4c7a?experience=power-bi'
   },
   {
     title: 'StreamFlix',
-    description: 'Automated ETL pipeline for processing financial transactions with real-time anomaly detection and reporting.',
+    description: 'This project involves building a data pipeline to collect, process, and analyze user activity data from a streaming service to enhance user experience and content recommendations.',
     image: 'assets/images/pro1.png',
     category: 'Data Engineering',
     technologies: ['Python', 'Apache Airflow', 'MongoDB', 'Docker'],
@@ -77,16 +86,6 @@ export class LandingpageComponent implements OnInit, OnDestroy {
     githubUrl: 'https://github.com/David24242442/',
     liveUrl: 'https://app.powerbi.com/groups/me/reports/07561cfa-5111-4977-9c16-d37233b1502c/0910953500869150b900?experience=power-bi'
   },
-   {
-    title: 'Financial Data Pipeline',
-    description: 'Visual analytics dashboard for Tourism Agency, enabling the business manager to identify trends and improve tourism outcomes.',
-    image: 'assets/images/pro4.png',
-    category: 'Data Visualization',
-    technologies: ['Python', 'Sql', 'Excel', 'Power BI'],
-    githubUrl: 'https://github.com/David24242442/',
-    liveUrl: 'https://app.powerbi.com/groups/me/reports/b25f0ed1-1da9-4a2d-a4f2-9e3f18c71468/c497e427d43e24daa200?experience=power-bi'
-   },
-   
      {
     title: 'Financial Data Pipeline',
     description: 'Automated ETL pipeline for processing financial transactions with real-time anomaly detection and reporting.',
@@ -180,7 +179,7 @@ toggleExperience(index: number): void {
     this.onWindowScroll();
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onWindowScroll(): void {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -331,7 +330,7 @@ toggleExperience(index: number): void {
   }
   downloadResume(): void {
     const link = document.createElement('a');
-     window.open('assets/images/Dave.pdf', '_blank');
+     window.open('assets/images/da.pdf', '_blank');
   
     document.body.appendChild(link);
     link.click();
