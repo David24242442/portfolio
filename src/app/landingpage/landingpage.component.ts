@@ -330,7 +330,7 @@ toggleExperience(index: number): void {
   }
   downloadResume(): void {
     const link = document.createElement('a');
-     window.open('assets/images/da.pdf', '_blank');
+     window.open('assets/images/David.pdf', '_blank');
   
     document.body.appendChild(link);
     link.click();
