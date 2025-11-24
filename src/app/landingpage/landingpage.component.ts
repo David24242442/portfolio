@@ -253,7 +253,7 @@ toggleExperience(index: number): void {
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navbarHeight;
 
-      this.smoothScrollTo(offsetPosition, 1000);
+      this.smoothScrollTo(offsetPosition, 2000);
     }
   }
 
@@ -283,7 +283,7 @@ toggleExperience(index: number): void {
   }
 
   scrollToTop(): void {
-    this.smoothScrollTo(0, 1000);
+    this.smoothScrollTo(0, 2000);
   }
 
   toggleMenu(): void {
