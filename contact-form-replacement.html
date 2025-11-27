@@ -1,0 +1,35 @@
+<!-- Quick Message Form -->
+<div class="message-form bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 md:p-8 opacity-0 max-h-80 max-w-4xl mx-auto"
+    [class.animate-fadeInUp]="sectionInView === 'contact'">
+    <h3 class="text-lg md:text-xl font-bold text-white relative ml-0 md:ml-16 lg:ml-64">Send a Quick Message</h3>
+    <form action="https://formsubmit.co/davidadom2424@gmail.com" method="POST" class="space-y-6 md:space-y-8">
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://david24242442.github.io/portfolio/">
+
+        <div class="form-group flex justify-center">
+            <input type="text" name="name" placeholder="Your Name"
+                class="w-full max-w-md h-10 bg-white/10 border border-white/20 rounded-xl px-4 md:px-6 py-4 text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none transition-all duration-300"
+                required>
+        </div>
+        <div class="form-group flex justify-center">
+            <input type="email" name="email" placeholder="Your Email"
+                class="w-full max-w-md h-10 bg-white/10 border border-white/20 rounded-xl px-4 md:px-6 py-4 text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none transition-all duration-300"
+                required>
+        </div>
+        <div class="form-group flex justify-center">
+            <textarea name="message" placeholder="Your Message" rows="5"
+                class="w-full max-w-md bg-white/10 border border-white/20 rounded-xl px-4 md:px-6 py-4 text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none transition-all duration-300 resize-none"
+                required></textarea>
+        </div>
+        <button type="submit"
+            class="w-full h-12 group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-medium overflow-hidden transition-all duration-300 hover:shadow-2xl">
+            <span class="relative z-10">Send Message</span>
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+        </button>
+    </form>
+</div>
