@@ -30,7 +30,7 @@ export class LandingpageComponent implements OnInit, OnDestroy {
   @ViewChild('about') aboutSection!: ElementRef;
   @ViewChild('experience') experienceSection!: ElementRef;
   // FIXED: Renamed to 'projectsSection' to avoid conflict with array 'projects'
- @ViewChild('projectsSection') projectsSection!: ElementRef;
+  @ViewChild('projectsSection') projectsSection!: ElementRef;
   @ViewChild('contact') contactSection!: ElementRef;
 
   isMenuOpen = false;
@@ -48,121 +48,127 @@ export class LandingpageComponent implements OnInit, OnDestroy {
   ];
 
   // ENSURED: Explicitly typed as Project[] (array, not HTMLElement)
- projects: Project[] = [
- 
-  {
-    title: ' MediHealth Sales Performance',
-    description: 'The MediHealth Sales Performance project analyzes sales data using Power BI to uncover trends, evaluate                regional and customer performance, and provide insights to improve profitability and customer retention.',
-    image: 'assets/images/medi.png',
-    category: 'Data Visualization',
-    technologies: ['Python', 'Sql', 'Excel', 'Power BI'],
-    githubUrl: 'https://github.com/David24242442/',
-    liveUrl: 'https://app.powerbi.com/groups/me/reports/16c185e3-cadc-46b1-a29c-2bb744708307/81036f8889a06eb52c1a?experience=power-bi'
-   },
-  {
-    title: 'TechSolutions Dashboard',
-    description: 'This project analyzes TechSolutions Ghana’s business performance to identify ways to improve client retention, service efficiency, and overall profitability..',
-    image: 'assets/images/pro.png',
-    category: 'Visualization Dashboard',
-    technologies: ['Python', 'Scikit-learn', 'Power Bi', 'SQL'],
-    githubUrl: 'https://github.com/David24242442/',
-    liveUrl: 'https://app.powerbi.com/groups/me/reports/77e8cc06-a207-4eab-8b48-ff9e51da4750/7fb7d48861d7ba5b4c7a?experience=power-bi'
-  },
-  {
-    title: 'StreamFlix',
-    description: 'This project involves building a data pipeline to collect, process, and analyze user activity data from a streaming service to enhance user experience and content recommendations.',
-    image: 'assets/images/pro1.png',
-    category: 'Data Engineering',
-    technologies: ['Python', 'Apache Airflow', 'MongoDB', 'Docker'],
-    githubUrl: 'https://github.com/David24242442/',
-    liveUrl: 'https://app.powerbi.com/groups/me/reports/622df7cf-2602-4fc1-a2a3-c006ce461943/bfd121c92c546d3902f3?experience=power-bi'
-   },
+  projects: Project[] = [
+
     {
-    title: 'Heart Factors Analytics Dashboard',
-    description: 'Real-time sales analytics dashboard with predictive modeling for inventory management and customer behavior analysis.',
-    image: 'assets/images/pro3.png',
-    category: 'Data Visualization',
-    technologies: ['Power BI', 'Python', 'SQL', 'Azure'],
-    githubUrl: 'https://github.com/David24242442/',
-    liveUrl: 'https://app.powerbi.com/groups/me/reports/07561cfa-5111-4977-9c16-d37233b1502c/0910953500869150b900?experience=power-bi'
-  },
-     {
-    title: 'Financial Data Pipeline',
-    description: 'Automated ETL pipeline for processing financial transactions with real-time anomaly detection and reporting.',
-    image: 'assets/images/forex.jpg',
-    category: 'Data Engineering',
-    technologies: ['Python', 'git', 'angular', 'Docker'],
-    githubUrl: 'https://github.com/David24242442/',
-    liveUrl: 'https://david24242442.github.io/forextracker'
-   },
-       {
-    title: 'Service Wepp',
-    description: 'Creating a Website for a Service-based Company to enhance their online presence and attract more customers.',
-    image: 'assets/images/pro7.png',
-    category: 'WEB DEVELOPMENT',
-    technologies: ['Python', 'Angular', 'FireStore', 'Docker'],
-    githubUrl: 'https://github.com/David24242442/',
-    liveUrl: ' https://servicewepp.web.app/'
+      title: ' MediHealth Sales Performance',
+      description: 'The MediHealth Sales Performance project analyzes sales data using Power BI to uncover trends, evaluate                regional and customer performance, and provide insights to improve profitability and customer retention.',
+      image: 'assets/images/medi.png',
+      category: 'Data Visualization',
+      technologies: ['Python', 'Sql', 'Excel', 'Power BI'],
+      githubUrl: 'https://github.com/David24242442/',
+      liveUrl: 'https://app.powerbi.com/groups/me/reports/16c185e3-cadc-46b1-a29c-2bb744708307/81036f8889a06eb52c1a?experience=power-bi'
+    },
+    {
+      title: 'TechSolutions Dashboard',
+      description: 'This project analyzes TechSolutions Ghana’s business performance to identify ways to improve client retention, service efficiency, and overall profitability..',
+      image: 'assets/images/pro.png',
+      category: 'Visualization Dashboard',
+      technologies: ['Python', 'Scikit-learn', 'Power Bi', 'SQL'],
+      githubUrl: 'https://github.com/David24242442/',
+      liveUrl: 'https://app.powerbi.com/groups/me/reports/77e8cc06-a207-4eab-8b48-ff9e51da4750/7fb7d48861d7ba5b4c7a?experience=power-bi'
+    },
+    {
+      title: 'StreamFlix',
+      description: 'This project involves building a data pipeline to collect, process, and analyze user activity data from a streaming service to enhance user experience and content recommendations.',
+      image: 'assets/images/pro1.png',
+      category: 'Data Engineering',
+      technologies: ['Python', 'Apache Airflow', 'MongoDB', 'Docker'],
+      githubUrl: 'https://github.com/David24242442/',
+      liveUrl: 'https://app.powerbi.com/groups/me/reports/622df7cf-2602-4fc1-a2a3-c006ce461943/bfd121c92c546d3902f3?experience=power-bi'
+    },
+    {
+      title: 'Heart Factors Analytics Dashboard',
+      description: 'Real-time sales analytics dashboard with predictive modeling for inventory management and customer behavior analysis.',
+      image: 'assets/images/pro3.png',
+      category: 'Data Visualization',
+      technologies: ['Power BI', 'Python', 'SQL', 'Azure'],
+      githubUrl: 'https://github.com/David24242442/',
+      liveUrl: 'https://app.powerbi.com/groups/me/reports/07561cfa-5111-4977-9c16-d37233b1502c/0910953500869150b900?experience=power-bi'
+    },
+    {
+      title: 'Financial Data Pipeline',
+      description: 'Automated ETL pipeline for processing financial transactions with real-time anomaly detection and reporting.',
+      image: 'assets/images/forex.jpg',
+      category: 'Data Engineering',
+      technologies: ['Python', 'git', 'angular', 'Docker'],
+      githubUrl: 'https://github.com/David24242442/',
+      liveUrl: 'https://david24242442.github.io/forextracker'
+    },
+    {
+      title: 'Service Wepp',
+      description: 'Creating a Website for a Service-based Company to enhance their online presence and attract more customers.',
+      image: 'assets/images/pro7.png',
+      category: 'WEB DEVELOPMENT',
+      technologies: ['Python', 'Angular', 'FireStore', 'Docker'],
+      githubUrl: 'https://github.com/David24242442/',
+      liveUrl: ' https://servicewepp.web.app/'
+    }
+  ];
+
+  experiences = [
+    {
+      title: 'Data Analyst',
+      company: 'Generation Ghana',
+      duration: 'Jan 2024 – Present',
+      expanded: false,
+      responsibilities: [
+        'Analyzing organizational data to provide actionable insights for business decisions.',
+        'Creating interactive Power BI dashboards and visual reports to monitor KPIs.',
+        'Automating data collection and cleaning processes using Python and Excel.',
+        'Collaborating with teams to identify trends and opportunities for growth.',
+      ],
+    },
+    {
+      title: 'Software Developer',
+      company: 'Ghana Library Authority',
+      duration: 'Jun 2022 – Dec 2023',
+      expanded: false,
+      responsibilities: [
+        'Developed web-based systems using Angular and FastAPI to manage digital resources.',
+        'Implemented authentication, data visualization, and backend integrations.',
+        'Collaborated with cross-functional teams to digitize learning materials and improve user experience.',
+        'Optimized system performance and maintained code documentation.',
+      ],
+    },
+    {
+      title: 'Digital Designer',
+      company: 'Kr8tive Impakt',
+      duration: 'Jan 2021 – May 2022',
+      expanded: false,
+      responsibilities: [
+        'Created visual brand identities and digital designs for clients and campaigns.',
+        'Designed UI/UX layouts for web and mobile applications.',
+        'Worked closely with developers to bring creative concepts to life through code.',
+        'Managed multiple client projects ensuring creative consistency and timely delivery.',
+      ],
+    },
+    {
+      title: 'Digital Designer',
+      company: 'Kr8tive Impakt',
+      duration: 'Jan 2021 – May 2022',
+      expanded: false,
+      responsibilities: [
+        'Created visual brand identities and digital designs for clients and campaigns.',
+        'Designed UI/UX layouts for web and mobile applications.',
+        'Worked closely with developers to bring creative concepts to life through code.',
+        'Managed multiple client projects ensuring creative consistency and timely delivery.',
+      ],
+    },
+  ];
+  expandedExperiences = [false, false, false, false];
+
+  toggleExperience(index: number): void {
+    this.expandedExperiences[index] = !this.expandedExperiences[index];
   }
-];
 
- experiences = [
-  {
-    title: 'Data Analyst',
-    company: 'Generation Ghana',
-    duration: 'Jan 2024 – Present',
-    expanded: false,
-    responsibilities: [
-      'Analyzing organizational data to provide actionable insights for business decisions.',
-      'Creating interactive Power BI dashboards and visual reports to monitor KPIs.',
-      'Automating data collection and cleaning processes using Python and Excel.',
-      'Collaborating with teams to identify trends and opportunities for growth.',
-    ],
-  },
-  {
-    title: 'Software Developer',
-    company: 'Ghana Library Authority',
-    duration: 'Jun 2022 – Dec 2023',
-    expanded: false,
-    responsibilities: [
-      'Developed web-based systems using Angular and FastAPI to manage digital resources.',
-      'Implemented authentication, data visualization, and backend integrations.',
-      'Collaborated with cross-functional teams to digitize learning materials and improve user experience.',
-      'Optimized system performance and maintained code documentation.',
-    ],
-  },
-  {
-    title: 'Digital Designer',
-    company: 'Kr8tive Impakt',
-    duration: 'Jan 2021 – May 2022',
-    expanded: false,
-    responsibilities: [
-      'Created visual brand identities and digital designs for clients and campaigns.',
-      'Designed UI/UX layouts for web and mobile applications.',
-      'Worked closely with developers to bring creative concepts to life through code.',
-      'Managed multiple client projects ensuring creative consistency and timely delivery.',
-    ],
-   },
-   {
-    title: 'Digital Designer',
-    company: 'Kr8tive Impakt',
-    duration: 'Jan 2021 – May 2022',
-    expanded: false,
-    responsibilities: [
-      'Created visual brand identities and digital designs for clients and campaigns.',
-      'Designed UI/UX layouts for web and mobile applications.',
-      'Worked closely with developers to bring creative concepts to life through code.',
-      'Managed multiple client projects ensuring creative consistency and timely delivery.',
-    ],
-  },
-];
- expandedExperiences = [false, false, false, false];
-
-toggleExperience(index: number): void {
-  this.expandedExperiences[index] = !this.expandedExperiences[index];
-}
-  
   ngOnInit(): void {
+    // Initialize custom cursor
+    this.initCustomCursor();
+
+    // Initialize particle system
+    this.initParticleSystem();
+
     setTimeout(() => {
       this.isLoading = false;
       setTimeout(() => {
@@ -173,10 +179,142 @@ toggleExperience(index: number): void {
     }, 800);
 
     this.initIntersectionObserver();
-    
+
     this.initSmoothScroll();
 
     this.onWindowScroll();
+  }
+
+  initCustomCursor(): void {
+    if (window.matchMedia('(hover: hover)').matches) {
+      const cursor = document.createElement('div');
+      cursor.className = 'custom-cursor';
+      const follower = document.createElement('div');
+      follower.className = 'custom-cursor-follower';
+
+      document.body.appendChild(cursor);
+      document.body.appendChild(follower);
+
+      let mouseX = 0, mouseY = 0;
+      let followerX = 0, followerY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+      });
+
+      // Smooth follower movement
+      const animateFollower = () => {
+        followerX += (mouseX - followerX) * 0.1;
+        followerY += (mouseY - followerY) * 0.1;
+
+        follower.style.left = followerX + 'px';
+        follower.style.top = followerY + 'px';
+
+        requestAnimationFrame(animateFollower);
+      };
+
+      animateFollower();
+
+      // Magnetic effect on interactive elements
+      document.querySelectorAll('button, a, .info-card, .project-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.style.transform = 'scale(1.5)';
+          cursor.style.borderColor = '#b24bf3';
+        });
+
+        el.addEventListener('mouseleave', () => {
+          cursor.style.transform = 'scale(1)';
+          cursor.style.borderColor = '#00f0ff';
+        });
+      });
+    }
+  }
+
+  initParticleSystem(): void {
+    const particlesContainer = document.querySelector('.particles');
+    if (particlesContainer) {
+      const canvas = document.createElement('canvas');
+      canvas.className = 'particles-canvas';
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      particlesContainer.appendChild(canvas);
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      const particles: Array<{
+        x: number;
+        y: number;
+        size: number;
+        speedX: number;
+        speedY: number;
+        opacity: number;
+      }> = [];
+
+      // Create particles
+      for (let i = 0; i < 50; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 3 + 1,
+          speedX: (Math.random() - 0.5) * 0.5,
+          speedY: (Math.random() - 0.5) * 0.5,
+          opacity: Math.random() * 0.5 + 0.2
+        });
+      }
+
+      const animate = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(particle => {
+          particle.x += particle.speedX;
+          particle.y += particle.speedY;
+
+          // Wrap around screen
+          if (particle.x < 0) particle.x = canvas.width;
+          if (particle.x > canvas.width) particle.x = 0;
+          if (particle.y < 0) particle.y = canvas.height;
+          if (particle.y > canvas.height) particle.y = 0;
+
+          // Draw particle
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(0, 240, 255, ${particle.opacity})`;
+          ctx.fill();
+
+          // Draw connections
+          particles.forEach(otherParticle => {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = `rgba(178, 75, 243, ${0.1 * (1 - distance / 100)})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          });
+        });
+
+        requestAnimationFrame(animate);
+      };
+
+      animate();
+
+      // Resize handler
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    }
   }
 
   @HostListener('window:scroll')
@@ -271,7 +409,7 @@ toggleExperience(index: number): void {
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
       const ease = easeInOutQuad(progress);
-      
+
       window.scrollTo(0, startPosition + distance * ease);
 
       if (timeElapsed < duration) {
@@ -288,7 +426,7 @@ toggleExperience(index: number): void {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
-    
+
     if (this.isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -298,18 +436,18 @@ toggleExperience(index: number): void {
 
   sendMessage(event: Event): void {
     event.preventDefault();
-    
+
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
-    
+
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
     const message = formData.get('message') as string;
 
     console.log('Sending message:', { name, email, message });
-    
+
     alert('Thank you for your message! I will get back to you soon.');
-    
+
     form.reset();
   }
 
@@ -330,8 +468,9 @@ toggleExperience(index: number): void {
   }
   downloadResume(): void {
     const link = document.createElement('a');
-     window.open('assets/images/David.pdf', '_blank');
-  
+    link.href = 'assets/images/David.pdf';
+    link.target = '_blank';
+
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
