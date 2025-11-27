@@ -468,7 +468,7 @@ export class LandingpageComponent implements OnInit, OnDestroy {
   }
   downloadResume(): void {
     const link = document.createElement('a');
-    link.href = 'assets/images/David.pdf';
+    link.href = 'assets/images/Dave.pdf';
     link.target = '_blank';
 
     document.body.appendChild(link);
