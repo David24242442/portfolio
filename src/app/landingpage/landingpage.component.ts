@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
+import confetti from 'canvas-confetti';
 
 interface NavItem {
   name: string;
@@ -446,9 +446,43 @@ export class LandingpageComponent implements OnInit, OnDestroy {
 
     console.log('Sending message:', { name, email, message });
 
-    alert('Thank you for your message! I will get back to you soon.');
+    // Trigger confetti
+    const duration = 3000;
+    const end = Date.now() + duration;
 
-    form.reset();
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors: ['#bb0000', '#ffffff']
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: ['#bb0000', '#ffffff']
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
+
+    // Also fire a burst from the center
+    confetti({
+      particleCount: 150,
+      spread: 100,
+      origin: { y: 0.6 },
+      zIndex: 9999
+    });
+
+    // Submit form after delay
+    setTimeout(() => {
+      form.submit();
+    }, 2000);
   }
 
   scrollToAbout(): void {
